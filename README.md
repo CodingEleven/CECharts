@@ -10,4 +10,4 @@ Xcode 9.2 / Swift 4.0
 iOS >= 8.0 
 Charts v3.0.5
 
-clone后需要执行 "pod update" 才能运行
+clone/download zip后需要执行 "pod update" 才能运行
