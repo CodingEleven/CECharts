@@ -1,7 +1,7 @@
 # CECharts
 learning of Charts
 
-==> LineChart
+==> LineChart\n
 ==> BarChart
 ==> PieChart
 
