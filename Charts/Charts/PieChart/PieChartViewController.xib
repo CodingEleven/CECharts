@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PieChartViewController">
+            <connections>
+                <outlet property="pieChartView" destination="5Up-X3-jzB" id="hCb-FT-CFe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03J-93-J8T">
+                    <rect key="frame" x="32" y="40" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="ghx-9m-BpU"/>
+                        <constraint firstAttribute="height" constant="40" id="p2o-0g-cY5"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="back.png"/>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="cbz-UB-0ad"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PieChart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81n-1U-SMs">
+                    <rect key="frame" x="146" y="40" width="122" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="122" id="7Z2-7t-Fpc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="0.092537594479999999" green="0.79929566220000003" blue="0.93026545900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Up-X3-jzB">
+                    <rect key="frame" x="0.0" y="110" width="414" height="300"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="pWi-6u-FWi"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xd-9C-NA4">
+                    <rect key="frame" x="20" y="430" width="374" height="50"/>
+                    <color key="backgroundColor" red="0.092537594479999999" green="0.79929566220000003" blue="0.93026545900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="XcA-Bb-C7M"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="显示PieChart"/>
+                    <connections>
+                        <action selector="showPieChart:" destination="-1" eventType="touchUpInside" id="41V-Lo-9Qr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJ4-eM-Tgj">
+                    <rect key="frame" x="20" y="499" width="374" height="50"/>
+                    <color key="backgroundColor" red="0.092537594479999999" green="0.79929566220000003" blue="0.93026545900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="更新数据"/>
+                    <connections>
+                        <action selector="updateData:" destination="-1" eventType="touchUpInside" id="2sp-Jz-5sZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5Up-X3-jzB" firstAttribute="top" secondItem="03J-93-J8T" secondAttribute="bottom" constant="30" id="9Sx-AF-6cD"/>
+                <constraint firstItem="oJ4-eM-Tgj" firstAttribute="width" secondItem="1xd-9C-NA4" secondAttribute="width" id="Axz-po-6io"/>
+                <constraint firstItem="5Up-X3-jzB" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Har-nY-8dv"/>
+                <constraint firstItem="5Up-X3-jzB" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="IfJ-oD-zXg"/>
+                <constraint firstItem="oJ4-eM-Tgj" firstAttribute="height" secondItem="1xd-9C-NA4" secondAttribute="height" id="N5W-nl-dlv"/>
+                <constraint firstItem="03J-93-J8T" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="32" id="NDs-TZ-8yF"/>
+                <constraint firstItem="1xd-9C-NA4" firstAttribute="top" secondItem="5Up-X3-jzB" secondAttribute="bottom" constant="20" id="RuS-hG-lwh"/>
+                <constraint firstItem="81n-1U-SMs" firstAttribute="centerY" secondItem="03J-93-J8T" secondAttribute="centerY" id="TFK-XU-Tbm"/>
+                <constraint firstItem="oJ4-eM-Tgj" firstAttribute="centerX" secondItem="1xd-9C-NA4" secondAttribute="centerX" id="VnB-Sn-OgI"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="1xd-9C-NA4" secondAttribute="trailing" constant="20" id="WFZ-jH-ABW"/>
+                <constraint firstItem="81n-1U-SMs" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="Xxc-KH-ihh"/>
+                <constraint firstItem="81n-1U-SMs" firstAttribute="height" secondItem="03J-93-J8T" secondAttribute="height" id="YMl-5W-yri"/>
+                <constraint firstItem="1xd-9C-NA4" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="fKI-yK-hbT"/>
+                <constraint firstItem="oJ4-eM-Tgj" firstAttribute="top" secondItem="1xd-9C-NA4" secondAttribute="bottom" constant="19" id="vmy-uj-J80"/>
+                <constraint firstItem="03J-93-J8T" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="z11-R4-4xI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ywI-yY-Unc">
+            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" title="Button"/>
+        </button>
+        <viewController id="lvn-8K-6qd">
+            <view key="view" contentMode="scaleToFill" id="0Y4-ia-MQR">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <viewLayoutGuide key="safeArea" id="kdI-EE-32j"/>
+            </view>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="back.png" width="64" height="64"/>
+    </resources>
+</document>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BarChartViewController">
+            <connections>
+                <outlet property="barChartView" destination="xLo-u9-GdU" id="siu-tK-DvK"/>
+                <outlet property="updateButton" destination="NhG-IQ-nda" id="Ty9-t4-3xJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwp-dk-mxh">
+                    <rect key="frame" x="29" y="37" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="iMe-Nk-w3V"/>
+                        <constraint firstAttribute="width" constant="40" id="rPP-IS-Or6"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="back.png"/>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="HdY-91-ENj"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLo-u9-GdU">
+                    <rect key="frame" x="0.0" y="99" width="414" height="300"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="05k-QL-uqx"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZk-sf-7XL">
+                    <rect key="frame" x="20" y="445" width="374" height="50"/>
+                    <color key="backgroundColor" red="0.092537594479999999" green="0.79929566220000003" blue="0.93026545900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="HLL-0l-ttg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="显示BarChart"/>
+                    <connections>
+                        <action selector="toShowBarChart:" destination="-1" eventType="touchUpInside" id="VvF-vG-JEt"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhG-IQ-nda">
+                    <rect key="frame" x="20" y="515" width="374" height="50"/>
+                    <color key="backgroundColor" red="0.092537594479999999" green="0.79929566220000003" blue="0.93026545900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="更新数据">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="updateData:" destination="-1" eventType="touchUpInside" id="voC-Wk-KbC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeF-Tg-1ZJ">
+                    <rect key="frame" x="20" y="585" width="374" height="50"/>
+                    <color key="backgroundColor" red="0.092537594479999999" green="0.79929566220000003" blue="0.93026545900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="停止更新"/>
+                    <connections>
+                        <action selector="stopUpdate:" destination="-1" eventType="touchUpInside" id="eYv-xR-V6F"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BarChart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okf-Uw-bES">
+                    <rect key="frame" x="146" y="37" width="122" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="122" id="ATe-wK-VcV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="0.092537594479999999" green="0.79929566220000003" blue="0.93026545900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xLo-u9-GdU" firstAttribute="top" secondItem="Lwp-dk-mxh" secondAttribute="bottom" constant="22" id="08u-th-npe"/>
+                <constraint firstItem="TeF-Tg-1ZJ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="1vb-u0-3Ng"/>
+                <constraint firstItem="Lwp-dk-mxh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="29" id="Aax-eD-wRh"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="NhG-IQ-nda" secondAttribute="trailing" constant="20" id="Br0-XI-soK"/>
+                <constraint firstItem="rZk-sf-7XL" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="FTL-L9-bt0"/>
+                <constraint firstItem="Okf-Uw-bES" firstAttribute="height" secondItem="Lwp-dk-mxh" secondAttribute="height" id="QG5-tI-xDV"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="rZk-sf-7XL" secondAttribute="trailing" constant="20" id="Svj-XD-CQh"/>
+                <constraint firstItem="NhG-IQ-nda" firstAttribute="top" secondItem="rZk-sf-7XL" secondAttribute="bottom" constant="20" id="ZPU-sM-sHJ"/>
+                <constraint firstItem="xLo-u9-GdU" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="aSd-Hv-uM9"/>
+                <constraint firstItem="NhG-IQ-nda" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="bI0-uK-vPr"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="TeF-Tg-1ZJ" secondAttribute="trailing" constant="20" id="bas-67-Zk7"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="xLo-u9-GdU" secondAttribute="trailing" id="h6G-FI-RFH"/>
+                <constraint firstItem="TeF-Tg-1ZJ" firstAttribute="height" secondItem="NhG-IQ-nda" secondAttribute="height" id="kH3-69-2xX"/>
+                <constraint firstItem="Okf-Uw-bES" firstAttribute="centerY" secondItem="Lwp-dk-mxh" secondAttribute="centerY" id="kuz-f3-eDC"/>
+                <constraint firstItem="rZk-sf-7XL" firstAttribute="top" secondItem="xLo-u9-GdU" secondAttribute="bottom" constant="46" id="mQ5-ts-xTZ"/>
+                <constraint firstItem="Okf-Uw-bES" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="nSO-pX-UFH"/>
+                <constraint firstItem="NhG-IQ-nda" firstAttribute="height" secondItem="rZk-sf-7XL" secondAttribute="height" id="pl9-un-5N3"/>
+                <constraint firstItem="TeF-Tg-1ZJ" firstAttribute="top" secondItem="NhG-IQ-nda" secondAttribute="bottom" constant="20" id="vnk-kg-RkW"/>
+                <constraint firstItem="Lwp-dk-mxh" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="17" id="xGP-L2-JPe"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="33" y="75"/>
+        </view>
+        <view contentMode="scaleToFill" id="7Cs-95-Dr4">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="B7o-ws-XPU"/>
+            <point key="canvasLocation" x="21" y="176"/>
+        </view>
+        <view contentMode="scaleToFill" id="Anj-41-dii">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="6yu-qa-MGk"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back.png" width="64" height="64"/>
+    </resources>
+</document>

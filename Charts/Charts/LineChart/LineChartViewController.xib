@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LineChartViewController">
+            <connections>
+                <outlet property="chartView" destination="YXG-Q4-CCP" id="fde-Py-X8X"/>
+                <outlet property="startButton" destination="QMl-OJ-HEf" id="Mh3-so-QeC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXG-Q4-CCP">
+                    <rect key="frame" x="0.0" y="100" width="414" height="300"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="lYP-mu-xLI"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jq4-PY-qNP">
+                    <rect key="frame" x="20" y="440" width="374" height="50"/>
+                    <color key="backgroundColor" red="0.092537594480555541" green="0.79929566223611104" blue="0.93026545903055557" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="qn5-al-7IG"/>
+                    </constraints>
+                    <state key="normal" title="显示lineChart">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showChart:" destination="-1" eventType="touchUpInside" id="mw6-xL-Y5l"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMl-OJ-HEf">
+                    <rect key="frame" x="20" y="510" width="374" height="50"/>
+                    <color key="backgroundColor" red="0.092537594479999999" green="0.79929566220000003" blue="0.93026545900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="XIq-BX-AO3"/>
+                    </constraints>
+                    <state key="normal" title="开始填充数据"/>
+                    <connections>
+                        <action selector="paddingData:" destination="-1" eventType="touchUpInside" id="cHP-73-3WG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1w-7e-Qbc">
+                    <rect key="frame" x="20" y="580" width="374" height="50"/>
+                    <color key="backgroundColor" red="0.092537594479999999" green="0.79929566220000003" blue="0.93026545900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="2Av-Kx-PZb"/>
+                    </constraints>
+                    <state key="normal" title="停止填充数据"/>
+                    <connections>
+                        <action selector="stopPadding:" destination="-1" eventType="touchUpInside" id="Luf-MF-EN5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzh-ta-m1e">
+                    <rect key="frame" x="20" y="40" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="XQI-XW-c62"/>
+                        <constraint firstAttribute="height" constant="40" id="gjr-tY-laV"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="back.png"/>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="PXc-rD-zhJ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LineChart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e1-5G-uO4">
+                    <rect key="frame" x="146" y="40" width="122" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="122" id="TAP-xD-KBi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="0.092537594479999999" green="0.79929566220000003" blue="0.93026545900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QMl-OJ-HEf" firstAttribute="top" secondItem="jq4-PY-qNP" secondAttribute="bottom" constant="20" id="5GA-Xl-HU3"/>
+                <constraint firstItem="2e1-5G-uO4" firstAttribute="height" secondItem="Nzh-ta-m1e" secondAttribute="height" id="69C-1w-Ao4"/>
+                <constraint firstItem="2e1-5G-uO4" firstAttribute="centerY" secondItem="Nzh-ta-m1e" secondAttribute="centerY" id="GQZ-fn-8h8"/>
+                <constraint firstAttribute="trailing" secondItem="YXG-Q4-CCP" secondAttribute="trailing" id="JND-8B-psr"/>
+                <constraint firstItem="R1w-7e-Qbc" firstAttribute="top" secondItem="QMl-OJ-HEf" secondAttribute="bottom" constant="20" id="KZs-U2-wjP"/>
+                <constraint firstItem="YXG-Q4-CCP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qsi-1L-f5q"/>
+                <constraint firstItem="R1w-7e-Qbc" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="R2g-ti-HHk"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="R1w-7e-Qbc" secondAttribute="trailing" constant="20" id="VpT-vN-GV0"/>
+                <constraint firstItem="jq4-PY-qNP" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="ZIu-PQ-GaD"/>
+                <constraint firstItem="QMl-OJ-HEf" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="ZkW-gp-a8A"/>
+                <constraint firstItem="2e1-5G-uO4" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="bf1-ZL-3CQ"/>
+                <constraint firstItem="jq4-PY-qNP" firstAttribute="top" secondItem="YXG-Q4-CCP" secondAttribute="bottom" constant="40" id="cW1-9g-aWf"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="jq4-PY-qNP" secondAttribute="trailing" constant="20" id="fQK-EE-qxa"/>
+                <constraint firstItem="YXG-Q4-CCP" firstAttribute="top" secondItem="Nzh-ta-m1e" secondAttribute="bottom" constant="20" id="fvN-LO-hYb"/>
+                <constraint firstItem="Nzh-ta-m1e" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="ii3-Tz-qMp"/>
+                <constraint firstItem="Nzh-ta-m1e" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="oz5-XC-EuY"/>
+                <constraint firstItem="QMl-OJ-HEf" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="xnb-ui-bTr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="32" y="60"/>
+        </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vnz-mX-uRe">
+            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" title="Button"/>
+        </button>
+    </objects>
+    <resources>
+        <image name="back.png" width="64" height="64"/>
+    </resources>
+</document>
